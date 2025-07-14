@@ -1,0 +1,5 @@
+include README.md
+include requirements.txt
+include LICENSE
+recursive-include idea_similarity_api/data *.csv
+recursive-include models *.pkl 
