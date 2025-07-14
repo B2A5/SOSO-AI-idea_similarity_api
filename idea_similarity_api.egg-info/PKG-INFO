@@ -52,10 +52,10 @@ Dynamic: summary
 
 ```bash
 # Git에서 직접 설치
-pip install git+https://github.com/your-team/idea-similarity-api.git
+pip install git+https://github.com/LEEYH205/kdt_idea_similarity_api.git
 
 # 또는 로컬에서 설치
-git clone https://github.com/your-team/idea-similarity-api.git
+git clone https://github.com/LEEYH205/kdt_idea_similarity_api.git
 cd idea-similarity-api
 pip install -e .
 ```
@@ -154,7 +154,7 @@ idea-similarity-api/
 
 ### 1. 설치
 ```bash
-pip install git+https://github.com/your-team/idea-similarity-api.git
+pip install git+https://github.com/LEEYH205/kdt_idea_similarity_api.git
 ```
 
 ### 2. 서버 실행
@@ -273,6 +273,6 @@ curl http://localhost:8000/health
 
 ---
 
-**개발자**: AI Study Team  
+**개발자**: LEEYH205 ejrdkachry@gmail.com
 **버전**: 1.0.0  
 **최종 업데이트**: 2024년 12월 

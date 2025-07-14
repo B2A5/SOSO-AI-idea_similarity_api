@@ -38,6 +38,7 @@ setup(
     package_data={
         "idea_similarity_api": ["data/*.csv"],
     },
+    zip_safe=False,
     entry_points={
         "console_scripts": [
             "idea-api=idea_similarity_api.api_server:main",

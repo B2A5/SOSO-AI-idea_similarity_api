@@ -9,5 +9,9 @@ idea_similarity_api.egg-info/PKG-INFO
 idea_similarity_api.egg-info/SOURCES.txt
 idea_similarity_api.egg-info/dependency_links.txt
 idea_similarity_api.egg-info/entry_points.txt
+idea_similarity_api.egg-info/not-zip-safe
 idea_similarity_api.egg-info/requires.txt
 idea_similarity_api.egg-info/top_level.txt
+idea_similarity_api/data/ideas_sample.csv
+idea_similarity_api/data/ideas_sample_100.csv
+idea_similarity_api/data/ideas_sample_1000.csv
