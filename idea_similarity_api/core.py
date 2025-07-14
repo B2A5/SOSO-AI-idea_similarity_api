@@ -11,14 +11,18 @@ class IdeaSimilarityEngine:
     def __init__(self, csv_path=None):
         # 패키지 내부 데이터 경로 사용
         if csv_path is None:
-            try:
-                import pkg_resources
-                csv_path = pkg_resources.resource_filename('idea_similarity_api', 'data/ideas_sample_1000.csv')
-            except:
-                # fallback: 상대 경로 사용
-                import os
-                package_dir = os.path.dirname(os.path.abspath(__file__))
-                csv_path = os.path.join(package_dir, "..", "data", "ideas_sample_1000.csv")
+            import os
+            package_dir = os.path.dirname(os.path.abspath(__file__))
+            csv_path = os.path.join(package_dir, "data", "ideas_sample_1000.csv")
+            
+            # 파일이 없으면 다른 방법 시도
+            if not os.path.exists(csv_path):
+                try:
+                    import pkg_resources
+                    csv_path = pkg_resources.resource_filename('idea_similarity_api', 'data/ideas_sample_1000.csv')
+                except:
+                    # 마지막 fallback: 상대 경로
+                    csv_path = os.path.join(package_dir, "..", "data", "ideas_sample_1000.csv")
         self.df = pd.read_csv(csv_path).fillna("")
         self.embedder = SentenceTransformer("jhgan/ko-sbert-sts")
         self.index = None
