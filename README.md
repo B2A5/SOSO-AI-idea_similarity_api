@@ -16,6 +16,13 @@ cd idea-similarity-api
 pip install -e .
 ```
 
+### 테스트 데이터
+```
+test_data 폴더 내 `ideas_sample_1000.csv`를
+`idea_similarity_api` 가 설치된 폴더 내
+data 폴더를 생성 후, 폴더 안에 붙여 넣는다.
+```
+
 ### API 서버 실행
 
 ```bash
@@ -28,6 +35,14 @@ idea-api --port 8080
 # 특정 호스트로 실행
 idea-api --host 0.0.0.0 --port 8000
 ```
+
+
+## 웹 문서
+
+서버 실행 후 다음 URL에서 API 문서를 확인할 수 있습니다
+
+- **Swagger UI**: http://localhost:8000/docs
+- **ReDoc**: http://localhost:8000/redoc
 
 ### API 사용 예시
 
@@ -231,6 +246,6 @@ curl http://localhost:8000/health
 
 **개발자**: LEEYH205 ejrdkachry@gmail.com
 
-**버전**: 1.0.0  
+**버전**: 1.0.2  
 
-**최종 업데이트**: 데이터 : 2024년 12월
+**최종 업데이트**: 데이터 : 2025년 07월
