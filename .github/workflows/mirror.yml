@@ -1,0 +1,23 @@
+name: Mirror to B2A5 Organization
+
+on:
+  push:
+    branches: [ main, master ]
+    tags: [ 'v*' ]
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.MIRROR_TOKEN }}
+
+      - name: Mirror to B2A5 Organization
+        run: |
+          git remote add mirror https://x-access-token:${{ secrets.MIRROR_TOKEN }}@github.com/B2A5/SOSO-AI-idea_similarity_api.git
+          git push mirror --all --force
+          git push mirror --tags --force 
